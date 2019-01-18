@@ -18,12 +18,13 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
 ###############################################################################
 
 import rosegraphics as rg
-
+window = rg.TurtleWindow()
 
 def main():
     hyp = hello(3, 4)
     print(hyp)
-
+    apple('green', 5)
+    banana('green', 5)
     """
     TESTS the functions that you will write below.
     You write the tests per the _TODO_s below.
@@ -41,7 +42,7 @@ import math
 #
 #   You may name the function and its parameters whatever you wish.
 #
-# TODO: 3b.  In main, CALL your function and print the returned value,
+# DONE: 3b.  In main, CALL your function and print the returned value,
 #   to test whether you defined the function correctly.
 #
 ###############################################################################
@@ -51,7 +52,7 @@ def hello(a, b):
     return c
 
 ###############################################################################
-# TODO: 4a.  Define a function immediately below this _TODO_.
+# done: 4a.  Define a function immediately below this _TODO_.
 #   It takes two arguments:
 #     -- a string that represents a color (e.g. 'red')
 #     -- a positive integer that represents the thickness of a Pen.
@@ -73,16 +74,26 @@ def hello(a, b):
 #
 #   You may name the function and its parameters whatever you wish.
 #
-# TODO: 4b.  In main, CALL your function at least TWICE (with different values
+# DONE: 4b.  In main, CALL your function at least TWICE (with different values
 #   for the arguments) to test whether you defined the function correctly.
 #
 ###############################################################################
-def main():
-    apple('green', 5)
-    banana()
+
+
+def apple(a, b):
+
+    drew = rg.SimpleTurtle('turtle')
+    drew.pen = rg.Pen(a, 6)
+    drew.forward(100)
+    return drew
+def banana(a, b):
+    carl = rg.SimpleTurtle('turtle')
+    carl.pen = rg.Pen('blue', b)
+    carl.backward(100)
+    return carl
 
 ###############################################################################
-# TODO: 5.
+# DONE: 5.
 #   COMMIT-and-PUSH your work (after changing this TO-DO to DONE).
 #
 #   As a reminder, here is how you should do so:
@@ -107,3 +118,4 @@ def main():
 # Calls  main  to start the ball rolling.
 # -----------------------------------------------------------------------------
 main()
+window.close_on_mouse_click()
