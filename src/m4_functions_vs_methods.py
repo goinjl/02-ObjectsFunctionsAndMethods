@@ -225,7 +225,7 @@ def try_methods_and_functions():
     tommy.pen.color = 'red'
     draw_many_squares(tommy, 10, 50, 15)
     tommy.speed = 100
-    tommy.pen.thickness = 5
+    tommy.pen.thickness = 35
     draw_many_squares(tommy, 8, 300, 60)
     tommy.pen = rg.Pen('black',3)
     tommy.backward(200)
